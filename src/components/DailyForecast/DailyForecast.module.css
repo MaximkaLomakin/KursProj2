@@ -1,0 +1,228 @@
+.container {
+  margin-top: 30px;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.title {
+  margin-bottom: 25px;
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.forecastList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.dayBlock {
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.dayBlock:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 6px 20px var(--shadow-hover);
+  transform: translateY(-4px);
+  background: var(--card-bg);
+}
+
+.dayHeader {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.dayDate {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.dayPeriods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.periodItem {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.periodItem:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 12px var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.periodHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.periodLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.periodTime {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.periodContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.periodIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.periodTemp {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.periodFeelsLike {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.periodDescription {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+
+.periodDetails {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: var(--card-hover);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.periodDetail {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.noData {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .forecastList {
+    gap: 20px;
+  }
+
+  .dayBlock {
+    padding: 15px;
+  }
+
+  .dayDate {
+    font-size: 18px;
+  }
+
+  .dayPeriods {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .periodItem {
+    padding: 12px;
+  }
+
+  .periodLabel {
+    font-size: 14px;
+  }
+
+  .periodTemp {
+    font-size: 20px;
+  }
+
+  .periodDescription {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .dayDate {
+    font-size: 16px;
+  }
+
+  .periodTemp {
+    font-size: 18px;
+  }
+}
+

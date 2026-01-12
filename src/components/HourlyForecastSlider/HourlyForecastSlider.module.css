@@ -1,0 +1,273 @@
+.container {
+  margin-top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 20px;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 10px 60px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+.hourItem {
+  min-width: 200px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 15px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.hourItem:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px var(--shadow-hover);
+  background: var(--card-hover);
+  border-color: var(--accent-primary);
+  z-index: 5;
+  position: relative;
+}
+
+.time {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperature {
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.feelsLike {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.description {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.additionalInfo {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--card-hover);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.infoLabel {
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.infoValue {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: right;
+}
+
+.scrollButtonLeft,
+.scrollButtonRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--card-bg);
+  border: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--accent-primary);
+  z-index: 10;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.scrollButtonLeft:hover,
+.scrollButtonRight:hover {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px var(--shadow-hover);
+}
+
+.scrollButtonLeft {
+  left: 10px;
+}
+
+.scrollButtonRight {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sliderWrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slider {
+    padding: 10px 10px;
+    gap: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .scrollButtonLeft,
+  .scrollButtonRight {
+    display: none;
+  }
+
+  .hourItem {
+    min-width: 140px;
+    padding: 12px;
+    flex-shrink: 0;
+  }
+
+  .time {
+    font-size: 13px;
+  }
+
+  .temperature {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .additionalInfo {
+    font-size: 10px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    padding: 10px 8px;
+    gap: 10px;
+  }
+
+  .hourItem {
+    min-width: 120px;
+    padding: 10px;
+    flex-shrink: 0;
+  }
+
+  .temperature {
+    font-size: 18px;
+  }
+
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+
