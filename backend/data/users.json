@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "$2a$10$rAR.W3BrRbgd8oRpQPGt4uUR5NGp0pArJgg9npm02t.pBYjAT0pZy",
+    "name": "Administrator",
+    "email": "admin@example.com",
+    "role": "admin",
+    "registrationDate": "2025-12-08T21:07:49.553Z"
+  },
+  {
+    "id": 2,
+    "username": "Maxim",
+    "password": "$2a$10$vh3xqOuRH2dQAyQo9WRdtO0v6Lurx6lNQzxA4pJgmIeAOVBhnP1iq",
+    "name": "Maximka Lomakin",
+    "email": "korcuganov71@gmail.com",
+    "role": "admin",
+    "registrationDate": "2025-12-08T23:55:15.841Z"
+  }
+]
